@@ -1,0 +1,49 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - .gitignore
+      - README.md
+      - LICENSE
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Allow one concurrent deployment
+concurrency:
+  group: "cloudflare-pages"
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.3.10
+          bundler-cache: true
+
+      - name: Build site
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy _site --project-name=sylverscreen-blog
