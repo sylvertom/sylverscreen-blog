@@ -6,6 +6,8 @@ ruby "~> 3.3.0"
 
 gem "jekyll-theme-chirpy", "~> 7.4", ">= 7.4.1"
 
+gem "jekyll-polyglot", "1.11.0"
+
 gem "html-proofer", "~> 5.0", group: :test
 
 platforms :mingw, :x64_mingw, :mswin, :jruby do

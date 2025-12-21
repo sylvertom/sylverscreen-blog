@@ -1,0 +1,50 @@
+---
+---
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+/* Language Switcher Styles */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.lang-switcher .lang-active {
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+.lang-switcher .lang-link {
+  color: var(--text-muted-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.lang-switcher .lang-link:hover {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.lang-switcher .lang-separator {
+  color: var(--text-muted-color);
+  margin: 0 0.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .lang-switcher {
+    margin-left: 0.5rem;
+    font-size: 0.85rem;
+  }
+}

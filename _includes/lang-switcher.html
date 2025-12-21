@@ -1,0 +1,14 @@
+<div class="lang-switcher">
+  {% for lang in site.languages %}
+    {% if lang == site.active_lang %}
+      <span class="lang-active">{{ site.data[lang].l10n.lang_name }}</span>
+    {% else %}
+      {% if lang == site.default_lang %}
+        <a href=" {{ page.url }}" class="lang-link">{{ site.data[lang].l10n.lang_name }}</a>
+      {% else %}
+        <a href="/{{ lang }}{{ page.url }}" class="lang-link">{{ site.data[lang].l10n.lang_name }}</a>
+      {% endif %}
+    {% endif %}
+    {% unless forloop.last %}<span class="lang-separator">|</span>{% endunless %}
+  {% endfor %}
+</div>
