@@ -1,0 +1,32 @@
+# English translations
+lang_name: "English"
+lang_code: "en"
+
+# Navigation
+home: "Home"
+archives: "Archives"
+categories: "Categories"
+tags: "Tags"
+about: "About"
+contact: "Contact"
+
+# Post metadata
+recent_posts: "Recent Posts"
+trending_tags: "Trending Tags"
+read_more: "Read more"
+posted_on: "Posted on"
+updated_on: "Updated on"
+reading_time: "min read"
+
+# Comments
+comments: "Comments"
+leave_comment: "Leave a comment"
+
+# Pagination
+newer: "Newer"
+older: "Older"
+previous: "Previous"
+next: "Next"
+
+# Footer
+powered_by: "Powered by"

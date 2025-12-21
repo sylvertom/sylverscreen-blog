@@ -4,6 +4,7 @@ date: 2025-11-06 01:19:00 +0100
 categories: [Meta, Announcements]
 tags: [blog, relaunch]
 comments: true
+lang: en
 ---
 
 After 15 years, Sylverscreen is back - but with a new focus.

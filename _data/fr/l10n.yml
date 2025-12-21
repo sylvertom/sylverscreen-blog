@@ -1,0 +1,32 @@
+# Traductions françaises
+lang_name: "Français"
+lang_code: "fr"
+
+# Navigation
+home: "Accueil"
+archives: "Archives"
+categories: "Catégories"
+tags: "Étiquettes"
+about: "À propos"
+contact: "Contact"
+
+# Post metadata
+recent_posts: "Articles récents"
+trending_tags: "Étiquettes populaires"
+read_more: "Lire la suite"
+posted_on: "Publié le"
+updated_on: "Mis à jour le"
+reading_time: "min de lecture"
+
+# Comments
+comments: "Commentaires"
+leave_comment: "Laisser un commentaire"
+
+# Pagination
+newer: "Plus récent"
+older: "Plus ancien"
+previous: "Précédent"
+next: "Suivant"
+
+# Footer
+powered_by: "Propulsé par"
